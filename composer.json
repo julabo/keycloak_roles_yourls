@@ -4,7 +4,7 @@
     "type": "yourls-plugin",
     "license":"MIT",
     "require": {
-      "php": ">=7.4.0"
+      "php": ">=7.4.0",
       "julabo/keycloak_yourls": "^1.0"
     }
 }
