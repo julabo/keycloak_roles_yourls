@@ -1,11 +1,14 @@
 # Keycloak Roles YOURLS Plugin
 
 A YOURLS plugin that restricts administrative access based on Keycloak roles.
+Only users with the "User" role in Keycloak are allowed to access the YOURLS admin interface.
 Only users with the "Admin" role in Keycloak are allowed to manage plugins in the YOURLS admin interface.
 
 ## Features
 
-- **Role-based Access Control**: Restricts plugin management to users with the Keycloak "Admin" role
+- **Role-based Access Control**:
+  - Restricts YOURLS admin interface to users with the Keycloak "User" role
+  - Restricts plugin management to users with the Keycloak "Admin" role
 - **JWT Token Validation**: Decodes and validates Keycloak ID tokens from user sessions
 - **Admin Menu Control**: Dynamically removes plugin menu items for unauthorized users
 - **Debug Support**: Comprehensive debugging output when YOURLS debug mode is enabled
@@ -32,12 +35,14 @@ Only users with the "Admin" role in Keycloak are allowed to manage plugins in th
 
 The plugin uses the following constants that can be customized:
 
-- `OIDC_REQUIRED_ROLE`: The Keycloak role required for admin access (default: "Admin")
+- `OIDC_ADMIN_ROLE`: The Keycloak role required for admin access (default: "Admin")
+- `OIDC_USER_ROLE`: The Keycloak role required for user access (default: "User")
 
-To change the required role, modify this line in `plugin.php`:
+To change the required role, modify this constants in your `config.php`:
 
 ```php
-define('OIDC_REQUIRED_ROLE', 'YourCustomRole');
+define('OIDC_ADMIN_ROLE', 'YourCustomAdminRole');
+define('OIDC_USER_ROLE', 'YourCustomUserRole');
 ```
 
 ## How It Works
