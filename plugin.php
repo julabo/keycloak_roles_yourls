@@ -3,7 +3,7 @@
 Plugin Name: Restrict Keycloak Admin Access
 Plugin URI: https://github.com/julabo/keycloak_roles_yourls
 Description: Only users with the Keycloak role "Admin" are allowed to manage plugins. Debug shows tokens and roles.
-Version: 1.1.0
+Version: 1.1.1
 Author: Jan Leehr
 Author URI: https://julabo.com
 */
