@@ -19,6 +19,7 @@ Only users with the "Admin" role in Keycloak are allowed to manage plugins in th
 - YOURLS URL shortener
 - Keycloak server with OIDC authentication configured
 - PHP 7.4.0 or higher
+- The [Keycloak Plugin](https://github.com/julabo/keycloak_yourls) installed and configured
 - Active PHP session with Keycloak ID tokens
 
 ## Installation
